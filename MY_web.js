@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     row.className = 'matrix-row';
     
     // Create characters for the row
-        let charCount = window.innerWidth < 600 ? 17 : 70;
+        let charCount = window.innerWidth < 600 ? 25 : 70;
     for (let i = 0; i < charCount; i++) {
       const char = document.createElement('span');
       char.className = 'matrix-character';
