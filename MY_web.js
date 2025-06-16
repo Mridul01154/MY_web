@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     row.className = 'matrix-row';
     
     // Create characters for the row
-    for (let i = 0; i < 70; i++) {
+        let charCount = window.innerWidth < 600 ? 30 : 70;
+    for (let i = 0; i < charCount; i++) {
       const char = document.createElement('span');
       char.className = 'matrix-character';
       char.textContent = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
