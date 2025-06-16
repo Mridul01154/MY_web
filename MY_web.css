@@ -709,3 +709,61 @@
   overflow: auto;
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  /* Make header/nav cleaner on small screens */
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Main intro text smaller */
+  .intro p {
+    font-size: 1rem;
+  }
+
+  /* Adjust button */
+  .cyber-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Resize project cards and scroll box */
+  .projects-scroll {
+    height: auto; /* Let it adjust naturally */
+    flex-direction: column; /* Stack cards on small screens */
+  }
+
+  .project-card {
+    flex: 0 0 auto;
+    width: 100%; 
+  }
+
+  /* Resize skills grid */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  /* Footer social icons smaller */
+  .cyber-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* PDF viewer adjustments */
+  #pdf-canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
