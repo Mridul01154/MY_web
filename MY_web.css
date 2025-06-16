@@ -776,4 +776,8 @@
   .intro {
     text-align: center;
   }
+
+    .matrix-animation{
+    width: 100%;
+  }
 }
