@@ -223,6 +223,8 @@
       min-height: 70vh;
       position: relative;
       overflow: hidden;
+      width: 100%;
+      padding-left: 25%;
     }
     
     .main-container::before {
@@ -297,15 +299,7 @@
     .cyber-btn:hover::before {
       left: 100%;
     }
-    
-    .animation-area {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2;
-    }
+
     
     .cyber-frame {
       width: 220px;
@@ -314,6 +308,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 5%;
     }
     
     .cyber-frame::before {
@@ -664,7 +659,7 @@
 }
 
 .project-card {
-  flex: 0 0 350px; /* Fixed width card, adjust as needed */
+  flex: 0 0 350px; 
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
@@ -710,3 +705,75 @@
   width: 100%;
 }
 
+@media (max-width: 600px) {
+  header {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .nav-links li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .cyber-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .projects-scroll {
+    height: auto; 
+    flex-direction: row; 
+  }
+
+  .project-card {
+    flex: 0 0 auto;
+    width: 90%; 
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .cyber-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  #pdf-canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+    .cyber-frame {
+    margin: 0 auto;             
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animated-shape {
+    margin: 0 auto;
+  }
+
+  .animated-shape img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;            
+    height: auto;
+  }
+
+  .intro {
+    text-align: center;
+  }
+}
