@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const row = document.createElement('div');
     row.className = 'matrix-row';
 function getCharCount() {
-  return window.innerWidth < 600 ? 17 : 70;
+  return window.innerWidth < 600 ? 15 : 70;
 }
 
 // Then use:
