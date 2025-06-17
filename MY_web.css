@@ -776,4 +776,8 @@
   .intro {
     text-align: center;
   }
+
+ .logo {
+    padding-left: 40px;
+  }
 }
