@@ -224,7 +224,7 @@
       position: relative;
       overflow: hidden;
       width: 100%;
-      padding-left: 25%;
+      padding-left: 9%;
     }
     
     .main-container::before {
@@ -242,7 +242,7 @@
     .intro {
       flex: 1;
       min-width: 300px;
-      max-width: 650px;
+      max-width: 87%;
       z-index: 2;
       margin-left: 20px;
       margin-bottom: 3rem;
@@ -777,7 +777,142 @@
     text-align: center;
   }
 
- .logo {
+  .logo{
     padding-left: 40px;
+  }
+}
+
+.certificate-card {
+  position: relative;
+  flex: 0 0 500px;
+  background: rgba(15, 20, 40, 0.8);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid rgba(0, 184, 255, 0.1);
+  text-align: center;
+  color: white;
+}
+
+/* Glowing top bar animation */
+.certificate-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), var(--glow-secondary);
+}
+
+.certificate-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Image inside certificate */
+.cert-logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Certificate title */
+.certificate-card h3 {
+  font-size: 1.2rem;
+  color: var(--cyber-secondary);
+  margin: 0 auto 1rem;
+  max-width: 400px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Certificate date */
+.certificate-card p {
+  color: #b0c0ff;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* View button */
+.certificate-card .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  border: 2px solid var(--cyber-primary);
+  color: var(--cyber-primary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.certificate-card .btn i {
+  margin-right: 6px;
+}
+
+.certificate-card .btn:hover {
+  background-color: rgba(0, 255, 157, 0.1);
+  color: white;
+  box-shadow: var(--glow-primary);
+}
+
+
+@media (max-width: 768px) {
+  .certificate-card {
+    flex: 0 0 90%;             /* Use most of the screen width */
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .certificate-card h3 {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .certificate-card .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .cert-logo {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-card {
+    flex: 0 0 100%;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .certificate-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .certificate-card p {
+    font-size: 0.85rem;
+  }
+
+  .certificate-card .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .certificate-card .btn i {
+    margin-right: 4px;
   }
 }
